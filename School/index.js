@@ -1,6 +1,6 @@
 btnTabla = document.getElementById("btnTabla")
 
-
+// Obtiene los elementos del DOM 
 var alphabeto = document.getElementById("inpAlpha")
 var estados = document.getElementById("inpEstados")
 var estadosfin = document.getElementById("inpEstadosFin")
@@ -9,21 +9,15 @@ var elementoFilaAlphabeto = document.getElementById("FilaAlphabeto")
 
 var bodyTabla = document.getElementById("BodyTabla")
 
-
+// Funcion que obtiene las cadaenas ingresadas de los inputs, elimina las comas y transforma a arreglos
 function stand(){
     alphabetoArray = alphabeto.value.replaceAll(",","")
     estadosArray = estados.value.replaceAll(",","")
     estadosfinArray = estadosfin.value.replaceAll(",","")
 }
 
-function CreacionTablaTransicion(filas){
-    var tablaTransiciones = []
-    for (var i = 0;i<filas;i++){
-        tablaTransiciones[i]=[]
-    }
-    return tablaTransiciones
-}
 
+// Actualiza la notificacion a partir si la cadena es valida o invalida
 function UpdateAlert(valida,c){
     
     var alertElement = document.getElementById("alert")
@@ -43,7 +37,7 @@ function UpdateAlert(valida,c){
     
 }
 
-
+// Crea la tabla de transiciones en la interfaz grafica
 btnTabla.addEventListener("click",()=>{
     
     stand()
@@ -63,38 +57,42 @@ btnTabla.addEventListener("click",()=>{
 
 })
 
+//Funcion de boton comprobar
 btnComprobar.addEventListener("click",()=>{
 
-
-    // Creacion de Tabla de Transiciones
+    
+    //Obtiene la longitud del arreglo estados y del arregloAlphabeto
     var col = estadosArray.length
     var fil = alphabetoArray.length
 
+    // Crea un arreglo bidimensional a partir de las dimensiones de la tabla de transicion
     let tablaTransiciones = new Array(col)
     for(var i = 0 ;i<col;i++){
         tablaTransiciones[i] = new Array(fil)
     }
 
+    //Obtiene los elementos ingresados en los inputs de la tabla grafica y pobla el arreglo bidimencional anteriormente creado
     for(let f = 0; f < estadosArray.length;f++){
         for(let c = 0; c < alphabetoArray.length;c++){
             tablaTransiciones[f][c] = document.getElementById(f+"."+c).value
         }
     }
-
-    // Recorre la tabla de transisciones ingresada a partir de la cadea ingresada
-    
+    //Obtiene la cadena ingresada en el DOM
     var cadena = document.getElementById("inpCadena").value
 
-
+    //Variables de control de arreglo
     var fT = 0 
     var cT = 0
 
+    // Recorre la tabla de transisciones , validando la cadena ingresada
+    //----------------FUNCION DE AFD----------------// 
     for(let i = 0; i < cadena.length;i++){
         fT = alphabetoArray.indexOf(cadena[i])
         cT = tablaTransiciones[cT][fT]
 
     }
 
+    // Manda a llamar el estado correspondiente de alerta dependiendo si el estado en el que concluyo el recorrido de la tabla corresponde a uno de los estados finales
     if(estadosfinArray.includes(cT)){
         UpdateAlert(true,cadena)
     }else{
@@ -103,7 +101,7 @@ btnComprobar.addEventListener("click",()=>{
  
 })
 
-
+// Funcion de boton reinicio 
 btnReload.addEventListener("click",()=>{
     location.reload()
 })
