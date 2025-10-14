@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <title>Claro Dashboard • Business KPIs</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Eduardo Legorreta</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/EduLeg" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <div class="row">
+        <div class="col-lg-7 mb-4">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+              <li data-target="#carousel" data-slide-to="2"></li>
+              <li data-target="#carousel" data-slide-to="3"></li>
+              <li data-target="#carousel" data-slide-to="4"></li>
+              <li data-target="#carousel" data-slide-to="5"></li>
+              <li data-target="#carousel" data-slide-to="6"></li>
+              <li data-target="#carousel" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="/projects/assets/Captura de pantalla 2024-08-19 105816.png" alt="Summary KPIs view">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" loading="lazy" src="/projects/assets/Captura de pantalla 2024-08-20 124336.png" alt="Policy Tracker report">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" loading="lazy" src="/projects/assets/Captura de pantalla 2024-09-12 123030.png" alt="Commercial dashboard metrics">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" loading="lazy" src="/projects/assets/Captura de pantalla 2024-09-12 131949.png" alt="Commercial dashboard filters">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" loading="lazy" src="/projects/assets/Captura de pantalla 2024-09-19 135755.png" alt="Policy tracker by state">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" loading="lazy" src="/projects/assets/Captura de pantalla 2024-09-19 140136.png" alt="Policy tracker KPIs">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" loading="lazy" src="/projects/assets/Captura de pantalla 2024-09-20 135040.png" alt="Deep dive overview">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" loading="lazy" src="/projects/assets/Captura de pantalla 2024-09-20 150225.png" alt="Deep dive trends">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <h1 class="h3 mb-1">Claro Dashboard</h1>
+          <p class="text-muted mb-3">Analytics Dashboard • 2024</p>
+          <p>
+            Business metrics and KPI dashboard for stakeholders. The application queries Google BigQuery
+            to compute KPIs and trends, and lets users generate reports directly from the interface.
+          </p>
+          <div class="mb-3">
+            <span class="badge badge-tech mr-1">TypeScript</span>
+            <span class="badge badge-tech mr-1">Next.js</span>
+            <span class="badge badge-tech mr-1">React</span>
+            <span class="badge badge-tech mr-1">BigQuery</span>
+            <span class="badge badge-tech">Google Cloud</span>
+          </div>
+          <div class="mb-2">
+            <span class="badge badge-company">CodeStack Systems</span>
+          </div>
+          <div class="mb-3">
+            <a href="#" class="btn btn-sm btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">Repository</a>
+            <span class="badge badge-private ml-2">Private</span>
+          </div>
+          <hr>
+          <h2 class="h5 section-title">Contribution</h2>
+          <ul class="mb-4">
+            <li>Built reusable TypeScript UI components for KPI tiles, filters, and layouts.</li>
+            <li>Implemented Next.js API routes to query Google BigQuery with parameterized SQL.</li>
+            <li>Developed time‑series and breakdown visualizations to analyze trends over time.</li>
+            <li>Enabled report generation flows from the UI (export and print‑ready views).</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <small class="text-muted">© <span id="year"></span> Eduardo Legorreta. All rights reserved.</small>
+        <div>
+          <a class="link-muted mr-3" href="https://github.com/EduLeg" target="_blank" rel="noreferrer noopener">GitHub</a>
+          <a class="link-muted" href="mailto:eduardo.legorreta@revvolab.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  </body>
+</html>
+
+

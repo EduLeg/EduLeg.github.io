@@ -1,0 +1,141 @@
+/* Global styles for Eduardo Legorreta's portfolio */
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg: #f8fafc;           /* slate-50 */
+  --surface: #ffffff;       /* white */
+  --card: #ffffff;          /* card surface */
+  --text: #0f172a;          /* slate-900 */
+  --muted: #475569;         /* slate-600 */
+  --primary: #2563eb;       /* blue-600 */
+  --accent: #0891b2;        /* cyan-600 */
+  --border: #e5e7eb;        /* gray-200 */
+}
+
+html, body {
+  background: linear-gradient(180deg, var(--bg), #ffffff 40%, #ffffff 100%);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  letter-spacing: 0.1px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--surface) !important;
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar .navbar-brand {
+  color: var(--text) !important;
+  font-weight: 700;
+}
+.navbar .nav-link {
+  color: var(--muted) !important;
+}
+.navbar .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* Hero */
+.hero {
+  padding: 56px 0 24px;
+}
+.hero h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.hero p {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+.card .card-title {
+  color: var(--text);
+}
+.card .card-subtitle, .card .card-text {
+  color: var(--muted);
+}
+
+.project-img {
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Badges */
+.badge-tech {
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  font-weight: 600;
+}
+.badge-private {
+  background: rgba(100, 116, 139, 0.12);
+  color: #334155;
+  border: 1px solid rgba(100, 116, 139, 0.28);
+}
+.badge-public {
+  background: rgba(34, 197, 94, 0.12);
+  color: #15803d;
+  border: 1px solid rgba(34, 197, 94, 0.28);
+}
+
+/* Company badge */
+.badge-company {
+  background: rgba(245, 158, 11, 0.10); /* amber-500 */
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  font-weight: 700;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  background-color: var(--surface);
+}
+
+/* Carousel */
+.carousel-item img {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Carousel controls: gray chevrons */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M15 19l-7-7 7-7' fill='none' stroke='%236b7280' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M9 5l7 7-7 7' fill='none' stroke='%236b7280' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
+
+.section-title {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.link-muted {
+  color: var(--muted);
+}
+.link-muted:hover {
+  color: var(--primary);
+}
+
+

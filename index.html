@@ -7,49 +7,145 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/styles.css">
 
-    <title>Eduardo Legorreta University Portafolio</title>
+    <title>Eduardo Legorreta — Front‑End Portfolio</title>
   </head>
   <body>
 
-    <!-- Heading -->
-    <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1">University Portafolio</span>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Eduardo Legorreta</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/EduLeg" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <!-- Jumbotron-->
-    <div class="jumbotron jumbotron-fluid">
+    <!-- Hero -->
+    <section class="hero">
       <div class="container">
-        <h1 class="display-4">Project Portafolio</h1>
-        <p class="lead">Developed by <strong>Eduardo Alonso Legorreta Sedano</strong></p>
+        <h1 class="display-4 mb-3">Front‑End Portfolio</h1>
+        <p class="lead">Front‑end engineer focused on data‑rich applications and delightful UX. I build React/Next.js and React Native interfaces, design component systems, and ship reliable products backed by GCP/AWS (Firestore, BigQuery, Cloud Functions, streaming data). Experienced leading teams, shaping architecture, and delivering dashboards, marketplaces, and real‑time controls.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- Card Conteiner-->
-    <div class="container">
+    <!-- Projects Grid -->
+    <div class="container pb-5">
       <div class="row">
-        <div class="col">
-          <!-- Primera columna -->
-
-          <div class="card" style="width: 18rem;">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="project-img" src="/projects/assets/soca-sos/Captura de pantalla 2025-10-14 161604.png" alt="SOCA ERP">
             <div class="card-body">
-              <h5 class="card-title">Automaton Solver</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                Computational Mathematics</h6>
-              <p class="card-text">Validate the operation of a deterministic finite automaton (DFA) from its transition table.</p>
-              <a href="/School/index.html" class="card-link">Link</a>
+              <h5 class="card-title mb-1">SOCA Exchange ERP</h5>
+              <h6 class="card-subtitle mb-3 text-muted">Operations & Back‑office</h6>
+              <p class="card-text">Admin app to manage marketplace resources: inventory, orders, publications, users, validations, and reports.</p>
+              <div class="mb-3">
+                <span class="badge badge-tech mr-1">JavaScript</span>
+                <span class="badge badge-tech mr-1">React</span>
+                <span class="badge badge-tech mr-1">MUI</span>
+                <span class="badge badge-tech mr-1">Firestore</span>
+                <span class="badge badge-tech">Cloud Functions</span>
+              </div>
+              <div class="mb-2">
+                <span class="badge badge-company">SOCA Exchange</span>
+              </div>
+              <a href="/projects/soca-erp.html" class="btn btn-sm btn-outline-primary">View project</a>
+              <a href="https://soca-web-app.web.app/" target="_blank" rel="noreferrer noopener" class="btn btn-sm btn-outline-secondary ml-2">Website</a>
+              <span class="badge badge-private ml-2">Private</span>
             </div>
           </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="project-img" src="/projects/assets/soca-marketplace/Captura de pantalla 2025-10-14 152921.png" alt="Soca Exchange">
+            <div class="card-body">
+              <h5 class="card-title mb-1">SOCA Exchange Marketplace</h5>
+              <h6 class="card-subtitle mb-3 text-muted">Consumer Marketplace</h6>
+              <p class="card-text">Marketplace to trade clothes for points and points for clothes. Profiles, listings, orders, and wallet. I led design, architecture, and component development.</p>
+              <div class="mb-3">
+                <span class="badge badge-tech mr-1">JavaScript</span>
+                <span class="badge badge-tech mr-1">React</span>
+                <span class="badge badge-tech mr-1">MUI</span>
+                <span class="badge badge-tech mr-1">Firebase</span>
+                <span class="badge badge-tech">Cloud Functions</span>
+              </div>
+              <div class="mb-2">
+                <span class="badge badge-company">SOCA Exchange</span>
+              </div>
+              <a href="/projects/soca-exchange.html" class="btn btn-sm btn-outline-primary">View project</a>
+              <a href="https://socaexchange.com/" target="_blank" rel="noreferrer noopener" class="btn btn-sm btn-outline-secondary ml-2">Website</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary ml-2 disabled" tabindex="-1" aria-disabled="true">Repo</a>
+              <span class="badge badge-private ml-2">Private</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="project-img" src="/projects/assets/Captura de pantalla 2024-08-19 105816.png" alt="Claro Dashboard">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Claro Dashboard</h5>
+              <h6 class="card-subtitle mb-3 text-muted">Analytics Dashboard</h6>
+              <p class="card-text">Business KPIs and reporting dashboard backed by BigQuery. I built TS components, Next.js API routes, and time‑series visualizations.</p>
+              <div class="mb-3">
+                <span class="badge badge-tech mr-1">TypeScript</span>
+                <span class="badge badge-tech mr-1">Next.js</span>
+                <span class="badge badge-tech mr-1">React</span>
+                <span class="badge badge-tech">BigQuery</span>
+              </div>
+              <div class="mb-2">
+                <span class="badge badge-company">CodeStack Systems</span>
+              </div>
+              <a href="/projects/claro-dashboard.html" class="btn btn-sm btn-outline-primary">View project</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary ml-2 disabled" tabindex="-1" aria-disabled="true">Repo</a>
+              <span class="badge badge-private ml-2">Private</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="project-img" src="/projects/assets/aigen-mobile/Captura de pantalla 2024-07-09 121615.png" alt="AIGEN Mobile">
+            <div class="card-body">
+              <h5 class="card-title mb-1">AIGEN Robot Control (Mobile)</h5>
+              <h6 class="card-subtitle mb-3 text-muted">Geo‑spatial Remote Control</h6>
+              <p class="card-text">React Native app to visualize and control autonomous field robots. Live map, robot state, E‑Stop, and AWS streaming data.</p>
+              <div class="mb-3">
+                <span class="badge badge-tech mr-1">JavaScript</span>
+                <span class="badge badge-tech mr-1">React Native</span>
+                <span class="badge badge-tech mr-1">AWS</span>
+                <span class="badge badge-tech">Streaming Data</span>
+              </div>
+              <div class="mb-2">
+                <span class="badge badge-company">CodeStack Systems</span>
+              </div>
+              <a href="/projects/aigen-mobile.html" class="btn btn-sm btn-outline-primary">View project</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary ml-2 disabled" tabindex="-1" aria-disabled="true">Repo</a>
+              <span class="badge badge-private ml-2">Private</span>
+            </div>
+          </div>
+        </div>
         
-        </div>
-        <div class="col">
-          <!-- Segunda columna -->
-        </div>
-        <div class="col">
-          <!-- Tercera columna -->
-        </div>
+
       </div>
     </div>
+
+    <footer class="py-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <small class="text-muted">© <span id="year"></span> Eduardo Legorreta. All rights reserved.</small>
+        <div>
+          <a class="link-muted mr-3" href="https://github.com/EduLeg" target="_blank" rel="noreferrer noopener">GitHub</a>
+          <a class="link-muted" href="mailto:eduardo.legorreta@revvolab.com">Contact</a>
+        </div>
+      </div>
+    </footer>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -57,6 +153,7 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
